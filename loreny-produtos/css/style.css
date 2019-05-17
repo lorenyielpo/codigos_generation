@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+body{
+    background-image: repeating-linear-gradient(#b84b0c, yellow);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0%;
+}
+
+header{
+    background-color: #fffffff6;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+    margin: 0%;
+    width: 90%;
+    left: 5%;
+    top: 2%;
+    padding: 0.5%; 
+}
+
+nav{
+    width: 40%;
+    margin: 0% auto;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #b84b0c;
+}
+
+nav li{
+    padding: 2%;
+}
+
+nav li:hover{
+    background-color: #b84b0c;
+    padding: 2%;
+    width: 20%;
+    text-align: center;
+}
+
+nav li a{
+    color: #b84b0c;
+    font-size: 1rem;
+}
+
+nav li:hover a{
+    color: #ffffff;
+}
+
+
+footer{
+    font-size: 0.9rem;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 1.2% 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+h3{
+    color: #b84b0c;
+    margin: 0%;
+}
+
+p{
+    margin: 0%;
+    font-size: 1rem;
+}
+
+.icones{
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.icones div{
+    width: 10%;
+    margin: 0% 2%;
+}
+
+

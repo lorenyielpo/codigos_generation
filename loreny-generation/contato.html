@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Contato</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/livro-icon-png-3.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="hobbies.html">Hobbies</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+    <section>
+        <h1>Formulário</h1>
+        <form method="POST">
+            <div class="contact_data">
+                <label for="name">Nome</label>
+                <input type="text" name="name" required>
+                <label for="last_name">Sobrenome</label>
+                <input type="text" name="last_name" required>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" required>
+                <label for="subject">Assunto</label>
+                <select name="subject" required>
+                    <option value="" selected></option>
+                    <option value="info">Informação</option>
+                    <option value="duv">Dúvida</option>
+                    <option value="parc">Parceria</option>
+                </select>
+            </div>
+
+            <div class="genero">
+                <label>Gênero</label>
+                <input type="radio" name="gender" value="Feminino">
+                <label for="gender">Feminino</label>
+                <input type="radio" name="gender" value="Masculino">
+                <label for="gender">Masculino</label>
+                <input type="radio" name="gender" value="Prefiro não informar">
+                <label for="gender">Prefiro não informar</label>
+            </div>
+            <div class="hobby">
+                <label>Hobbies</label>
+                <div>
+                    <input type="checkbox" name="surf" value="surf">
+                    <label name="surf">Surf</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="handball" value="handball">
+                    <label name="handball">Handball</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="soccer" value="soccer">
+                    <label name="soccer">Futebol</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="dance" value="dance">
+                    <label name="dance">Dançar</label>
+                </div>
+            </div>
+            <div class="comment">
+                <label for="comment">Comentários</label>
+                <textarea name="comment" rows="5" cols="60" required></textarea>
+            </div>
+            <div class="btns">
+                <button type="submit">Enviar</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </section>
+    <footer>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe ut id, assumenda, cum iusto ducimus eveniet sed earum!</p>
+        <div class="icones">
+            <p>
+                <strong>Redes Sociais:</strong>
+            </p>
+            <a href="https://www.facebook.com/" target="blank">
+                <button type="button" class="btn btn-fb text-muted">
+                    <i class="fab fa-facebook-f pr-1"></i>
+                </button>
+            </a>
+            <a href="https://www.twitter.com/" target="blank">
+                <button type="button" class="btn btn-tw text-muted">
+                    <i class="fab fa-twitter pr-1"></i>
+                </button>
+            </a>
+            <a href="https://www.linkedin.com/" target="blank">
+                <button type="button" class="btn btn-li text-muted">
+                    <i class="fab fa-linkedin-in pr-1"></i>
+                </button>
+            </a>
+            <a href="https://www.instagram.com/" target="blank">
+                <button type="button" class="btn btn-ins text-muted">
+                    <i class="fab fa-instagram pr-1"></i>
+                </button>
+            </a>
+            <a href="https://www.pinterest.com/" target="blank">
+                <button type="button" class="btn btn-pin text-muted">
+                    <i class="fab fa-pinterest pr-1"></i>
+                </button>
+            </a>
+            <a href="https://www.youtube.com/" target="blank">
+                <button type="button" class="btn btn-yt text-muted">
+                    <i class="fab fa-youtube pr-1"></i>
+                </button>
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+body{
+    background-image: url("../img/bg-body.png");
+}
+
+header{
+    margin: 3rem auto 1.5rem;
+}
+
+label{
+    display: none;
+}
+
+.logo{
+    margin: 2rem auto;
+}
+
+.logo img{
+    border-radius: 50%;
+    border: 2px solid #000000;
+    margin: 0rem auto;
+}
+
+.menu{
+    margin: 0.5rem auto;
+    padding: 0rem;
+}
+
+.menu ul li{
+    padding: 0.5rem 3.5rem;
+    background-color: #212529;
+    color: #ffffff;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+a, li{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav{
+    margin: 1.8rem auto;
+}
+
+.banner{
+    margin: 1.5rem auto;
+    width: 100%;
+}
+
+.grid-card{
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem auto;
+}
+
+.card{
+    width: 32%;
+    margin: 1rem 0rem;
+    border: none;
+    background-color: #ffffff00;
+}
+
+.card-body{
+    padding: 0rem;
+}
+
+.card-text, .card-title{
+    margin: 1rem 0rem;
+}
+
+.card-title{
+    font-weight: 700;
+}
+
+footer{
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    background-color: rgb(172, 19, 19);
+    margin: 0.75rem auto 0rem;
+}
+
+footer ul{
+    display: flex;
+    justify-content: space-around;
+    padding: 4rem 0rem;
+}
+
+@media (max-width: 676px) {
+    label{
+        display: inline-block;
+        margin: 0%;
+    }
+
+    header nav{
+        display: none;
+    }
+
+    label:focus .menu{
+        display: block;
+    }
+
+    .menu ul{
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        z-index: 2;
+        width: 80%;
+        margin: 0% auto;
+    }
+
+    .menu ul li{
+        width: 100%;
+        background-color: #212529ce;
+        color: #ffffff;
+    }
+ }
+
+

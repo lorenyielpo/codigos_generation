@@ -1,0 +1,35 @@
+.img-product{
+    width: 40%;
+    border: 1px solid #00000062;
+}
+
+.descricao{
+    width: 45%;
+    padding: 2%;
+    background-color: #b84b0c;
+    color: #ffffff;
+}
+
+.ref{
+    width: 90%;
+    margin: 2% 0%;
+    padding: 2%;
+    border: 1px solid #b84b0c;
+    color: #000000d0;
+}
+
+.ref li{
+    margin: 2% 0%;
+    list-style: none;
+}
+
+.ref p{
+    display: none;
+}
+
+.ref li:hover p{
+    display: inline-block;
+}
+
+
+
