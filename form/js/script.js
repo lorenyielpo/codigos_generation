@@ -5,8 +5,8 @@ let radioGen = document.querySelectorAll('#gender')
 let senhaA = document.forml.senha1;
 let senhaB = document.forml.senha2;
 let btnExibir = document.querySelector("#btn");
-let btnEditar = document.querySelector("#btnEdit")
-btnEditar.style.display = "none"
+let btnEditar = document.querySelector("#btnEdit");
+btnEditar.style.display = "none";
 
 
 document.forml.addEventListener("submit", function getFormvalue(event) {
@@ -71,9 +71,8 @@ btnExibir.addEventListener("click", function () {
     btnEditar.style.display = "block"
     btnEditar.addEventListener("click", function () {
         let promptRes = prompt("Deseja mudar seus dados? Sim ou não")
-        console.log(promptRes)
 
-        if (promptRes = "sim") {
+        if (promptRes === "sim") {
             liNome.innerHTML = prompt("Seu nome é " + nome.value + ", deseja mudar?")
             liSobrenome.innerHTML = prompt("Seu sobrenome é " + sobrenome.value + ", deseja mudar?")
         }
