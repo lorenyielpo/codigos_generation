@@ -4,7 +4,7 @@ public class Prova {
     public Atleta participante;
 
     public boolean podeRealizar(){
-        if(participante.energia > energiaNecessaria){
+        if(participante.energia > energiaNecessaria && participante.nivel > dificuldade){
             System.out.println("Pode realizar a prova");
             return true;
         } else{
