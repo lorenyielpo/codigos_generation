@@ -19,7 +19,7 @@ public class ContaCorrente extends Conta {
     @Override
     public void sacar(double saque) {
 
-        if (saque > getSaldo() && saque <= getSaldo() + chequeEspecial) {
+        if (saque <= getSaldo() + chequeEspecial) {
             super.setSaldo(getSaldo() - saque);
         } else {
             super.setSaldo(getSaldo() - saque);
