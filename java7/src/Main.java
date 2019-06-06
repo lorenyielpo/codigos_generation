@@ -10,6 +10,8 @@ public class Main {
         lulu.setSexo('F');
         lulu.ehMamifero();
 
+        System.out.println(lulu.getEspecie());
+
 
     }
 }
