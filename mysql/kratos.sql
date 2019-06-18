@@ -132,13 +132,15 @@ create database sistema;
 use sistema;
 
 create table departamento(
-	id_departamento integer primary key auto_increment not null,
+	id integer primary key auto_increment not null,
     nome varchar(100),
     telefone char(15)
 );
 
+drop table funcionario;
+
 create table funcionario(
-	id_funcionario integer primary key auto_increment not null,
+	id integer primary key auto_increment not null,
     nome varchar(100),
     id_departamento integer,
     data_cadastro date
@@ -150,8 +152,111 @@ describe funcionario;
 
 ALTER TABLE funcionario ADD FOREIGN KEY (id_departamento) REFERENCES departamento(id);
 
+INSERT INTO departamento (nome,
+    telefone) VALUES (
+    "sac",
+    "11857653379");
+    
+
+SELECT * FROM departamento ORDER BY nome ASC;
+
+SELECT * FROM departamento ORDER BY nome DESC;
+
+SELECT * FROM departamento WHERE telefone IS NULL;
+
+SELECT * FROM departamento WHERE telefone IS NOT NULL;
+
+SELECT * FROM departamento WHERE nome LIKE 'D%';
+
+SELECT * FROM departamento WHERE nome LIKE '%vendas';
+
+SELECT * FROM departamento WHERE nome LIKE '%de%';
+
+SELECT * FROM departamento WHERE nome NOT LIKE '%de%';
+
+SELECT * FROM departamento WHERE id = 400;
+
+SELECT * FROM departamento;
+
+CREATE DATABASE biblioteca;
 
 
 
+CREATE TABLE aluno (
+	id_aluno integer primary key not null,
+    nome varchar(100)
+);
+
+CREATE TABLE categoria (
+	id_categoria integer primary key not null,
+    categoria varchar(100)
+);
+
+CREATE TABLE livro (
+	id_livro integer primary key not null,
+    titulo varchar(200),
+	id_categoria integer
+);
+
+
+alter table livro add foreign key (id_categoria) references categoria(id_categoria);
+
+CREATE TABLE emprestimo (
+	id_emprestimo integer not null,
+    id_aluno integer,
+    id_livro integer, 
+    data_emprestimo date,
+    data_devolucao date,
+    primary key (id_emprestimo),
+    constraint uk_emprestimo
+    unique key (id_aluno, id_livro, data_emprestimo),
+    constraint fk_livro_emprestimo 
+    foreign key (id_livro) references livro(id_livro),
+    constraint fk_aluno_emprestimo 
+    foreign key (id_aluno) references aluno(id_aluno)
+);
+
+select * from emprestimo;
+
+select livro.id_livro,
+		livro.titulo,
+        categoria.id_categoria,
+        categoria.categoria
+from livro
+inner join categoria
+on livro.id_categoria = categoria.id_categoria;
+
+select * from emprestimo;
+
+select
+	a.id_aluno,
+    a.nome,
+    l.id_livro,
+    l.titulo,
+    e.data_emprestimo,
+    e.data_devolucao
+from aluno a
+inner join emprestimo e
+on a.id_aluno = e.id_aluno
+inner join livro l
+on e.id_livro = l.id_livro;
+
+
+select
+	a.id_aluno,
+    a.nome,
+    l.id_livro,
+    l.titulo,
+    c.id_categoria,
+    c.categoria,
+    e.data_emprestimo,
+    e.data_devolucao
+from aluno a
+inner join emprestimo e
+on a.id_aluno = e.id_aluno
+inner join livro l
+on e.id_livro = l.id_livro
+inner join categoria c
+on l.id_categoria = c.id_categoria;
 
 
